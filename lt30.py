@@ -69,3 +69,8 @@ class LT30:
         # self.close()
         if (value[:1] + value[-2:]) == 'A\r\n':
             return self.port
+
+if __name__ == '__main__':
+    lt = LT30('COM3')
+    value = lt.read()
+    print(value)
